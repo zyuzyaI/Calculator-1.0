@@ -48,7 +48,7 @@ class Calculator_gui(Frame):
 
 	def result(self, text):
 		try:
-			print(text.set(int(getattr(text.get(), self.names, self.names))))
+			text.set(str(eval(text.get(), self.names, self.names)))
 
 		except SyntaxError:
 			try:
